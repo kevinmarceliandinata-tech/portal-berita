@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+@include('berita._filter-pdf')
+
 <div class="d-flex justify-content-between mb-3">
     <h3>{{ auth()->user()->isAdmin() ? 'Daftar Berita' : 'Berita Saya' }}</h3>
     <a href="{{ route('berita.create') }}" class="btn btn-primary">+ Tambah Berita</a>

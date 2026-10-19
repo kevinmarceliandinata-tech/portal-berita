@@ -4,7 +4,11 @@
 @section('content')
 <div class="d-flex justify-content-between mb-3">
     <h3>Daftar Pengumuman</h3>
-    <a href="{{ route('pengumumans.create') }}" class="btn btn-primary">+ Tambah Pengumuman</a>
+    <div class="d-flex gap-2">
+        <a href="{{ route('laporan.pengumuman') }}" target="_blank" class="btn btn-outline-danger">Cetak PDF</a>
+        <a href="{{ route('laporan.pengumuman', ['aksi' => 'unduh']) }}" class="btn btn-danger">Unduh PDF</a>
+        <a href="{{ route('pengumumans.create') }}" class="btn btn-primary">+ Tambah Pengumuman</a>
+    </div>
 </div>
 <table class="table table-bordered bg-white align-middle">
     <thead><tr><th>Judul</th><th>Status</th><th>Lampiran</th><th>Dibuat oleh</th><th>Tanggal</th><th width="150">Aksi</th></tr></thead>

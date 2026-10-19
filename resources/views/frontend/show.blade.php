@@ -32,7 +32,10 @@
             </div>
         @endif
 
-        <a href="{{ route('home') }}" class="btn btn-outline-dark mt-4">&larr; Kembali ke beranda</a>
+        <div class="d-flex gap-2 mt-4">
+            <a href="{{ route('home') }}" class="btn btn-outline-dark">&larr; Kembali ke beranda</a>
+            <a href="{{ route('berita.pdf', ['berita' => $berita, 'aksi' => 'unduh']) }}" class="btn btn-danger">Unduh PDF</a>
+        </div>
     </div>
 
     <div class="col-lg-4">
